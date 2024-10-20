@@ -202,8 +202,8 @@ canvas.addEventListener('touchstart', (event) => {
 
 canvas.addEventListener('touchmove', (event) => {
   if (isDragging) {
-      offsetX = event.touches[0].clientX - dragStartX;
-      offsetY = event.touches[0].clientY - dragStartY;
+      offsetX = event.touches[0].clientX - startDragOffset.x;
+      offsetY = event.touches[0].clientY - startDragOffset.y;
       limitMapMovement(); // Limitar a movimentação
       drawMap();
   }
